@@ -1,0 +1,40 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class stone_paper_sicser {
+    public stone_paper_sicser() {
+    }
+
+    public static void main(String[] args) {
+        System.out.println("-----------lets play stone paper scissor game----------\n here are the necessary instructions : input the number corresponding to your choice \n 1.stone \n 2.paper \n 3.scissor");
+        System.out.print("Your Choise :");
+        Scanner sc = new Scanner(System.in);
+        byte a = sc.nextByte();
+        Random rand = new Random();
+        int rand1 = rand.nextInt(4);
+        System.out.println("computer :" + rand1);
+        if (a == 1 && rand1 == 1) {
+            System.out.println("ROUND TIED :  both have chosen stone");
+        } else if (a == 2 && rand1 == 2) {
+            System.out.println("ROUND TIED :  both have chosen paper");
+        } else if (a == 3 && rand1 == 3) {
+            System.out.println("ROUND TIED :  both have chosen scissor");
+        } else if (a == 1 && rand1 == 2) {
+            System.out.println("you:stone\ncomputer:paper\nyou lost!!!!");
+        } else if (a == 1 && rand1 == 3) {
+            System.out.println("you:stone\ncomputer:scissor\nyou won!!!!");
+        } else if (a == 2 && rand1 == 1) {
+            System.out.println("you : paper\ncomputer : stone \n you lost!!!");
+        } else if (a == 2 && rand1 == 3) {
+            System.out.println("you : paper\ncomputer : scissor \n you won!!!");
+        }
+
+    }
+}
